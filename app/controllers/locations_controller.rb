@@ -12,6 +12,10 @@ class LocationsController < ApplicationController
     @location = Location.find(params[:id])
   end
 
+  def index
+    @locations = Location.all
+  end
+
   private
   def location_params
     params.require(:location).permit(:name,:address)
