@@ -1,13 +1,13 @@
 <h1>Create a new location</h1>
 
-<%= form_for(@location) do |f| %>
+<div class='form-container'>
+  <%= form_for(@location) do |f| %>
 
-  <%= f.label :name %>:
-  <%= f.text_field :name %><br />
+    <label>Name: <%= f.text_field :name %></label><br />
 
-  <%= f.label :address %>:
-  <%= f.text_field :address %><br />
+    <label>Address: <%= f.text_field :address %></label><br />
 
-  <%= f.submit %>
+    <%= f.submit %>
 
-<% end %>
+  <% end %>
+</div>

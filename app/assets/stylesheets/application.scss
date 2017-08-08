@@ -9,7 +9,16 @@
  * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
  */
+@import "bourbon";
+@import "base/base";
+
+.container {
+  width:1000px;
+  margin:auto;
+  margin-top:50px;
+}
+
+.form-container {
+  width:500px;
+}
