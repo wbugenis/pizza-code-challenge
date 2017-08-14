@@ -1,0 +1,6 @@
+<h1>Yummy list</h1>
+
+<% @pizzerias.each do |pizzeria| %>
+  <h1>pizzeria <%= pizzeria.name %></h1>
+  <p>Address: <%= pizzeria.address %></p>
+<% end %>
