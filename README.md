@@ -17,7 +17,7 @@ Before you begin, fork and clone this repo, run `bundle install`, `rake db:migra
 ## The Domain
 You've just been hired by the 'NYC Pizza Society' - congratulations! The devoted members want you to develop a web application that will allow them to record their favorite spots and eats. To do this, we need a way to keep track of the gazillion NYC Pizza joints and record the favorites pizzas for each location.
 
-Luckily, another developer has already started the job. We have a controller, model and views to support the creation, listing and display of pizzerias. Visiting `/pizzerias` displays all of the pizzerias recorded by members. Unfortunately we don't have a way for members to record their favorite pizzas (so, so sad) for each pizzeria. Each Pizzeria has several Pizzas on their menu and each Pizza belongs to the Pizzeria.
+Luckily, another developer has already started the job. We have a controller, model and views to support the creation, listing and display of pizzerias. Visiting `/pizzerias` displays all of the pizzerias recorded by members. Unfortunately we don't have a way for members to record their favorite pizzas (so, so sad) for each pizzeria. **Each Pizzeria has several Pizzas on their menu and each Pizza belongs to the Pizzeria**.
 
 ## Instructions / Deliverables
 
