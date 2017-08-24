@@ -15,16 +15,22 @@ It's time to put our Rails know-how to the use.
 Before you begin, fork and clone this repo, run `bundle install`, `rake db:migrate` and `rake db:seed` to get started.
 
 ## The Domain
-You've just been hired by the 'NYC Pizza Society' - congratulations! The devoted members want you to develop a website that will allow them to record their favorite spots and eats. To do this, we need a way to keep track of the gazillion NYC Pizza joints and record the favorites pizzas for each location.
+You've just been hired by the 'NYC Pizza Society' - congratulations! The devoted members want you to develop a web application that will allow them to record their favorite spots and eats. To do this, we need a way to keep track of the gazillion NYC Pizza joints and record the favorites pizzas for each location.
 
-Luckily, another developer has already started the job. We have a controller, model and views to support the creation, listing and display of pizzerias. Visiting `/pizzerias` displays all of the pizzerias recorded by members. Unfortunately we don't have a way for members to record their favorite pizzas for each pizzeria. Each Pizzeria can have many pizzas and each pizza belongs to a Pizzeria.
+Luckily, another developer has already started the job. We have a controller, model and views to support the creation, listing and display of pizzerias. Visiting `/pizzerias` displays all of the pizzerias recorded by members. Unfortunately we don't have a way for members to record their favorite pizzas (so, so sad) for each pizzeria. Each Pizzeria has several Pizzas on their menu and each Pizza belongs to the Pizzeria.
 
 ## Instructions / Deliverables
 
 ***To help you complete this assignment we listed the high level steps required to complete this assignment. Read through them carefully to get a sense of the requirements for this code challenge, and then tackle them one by one.***
 
-1.
-
-
-### Hints / Tips
-+ 
+1. Before we start building the new functionality make sure that you are able to create and view a new pizzeria.
+2. Let build following an inside out approach (Domain model to views). Let's first develop classes required to persist Pizzas and associate them to a Pizzeria. We should be able to run the code below:
+```Ruby
+pizzeria = Pizzeria.first
+pizza = Pizza.create(name:'Norcia',description:'Tomato, salami, grilled peppers, fresh mozzarella, grana')
+pizza.pizzeria = pizzeria
+pizza.save
+pizzeria.pizzas.first === pizza # should return true
+```
+3. Now that our backend domain model is properly setup we can build the user facing features. Build the rails code required to add pizza's to a pizzeria. See the GIF below:
+![](pizza.gif)
