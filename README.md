@@ -33,4 +33,4 @@ pizza.save
 pizzeria.pizzas.first === pizza # should return true
 ```
 3. Now that our backend domain model is properly setup we can build the user facing features. Build the rails code required to add pizza's to a pizzeria. See the GIF below:
-![](pizza.gif)
+![img](pizza.gif)
