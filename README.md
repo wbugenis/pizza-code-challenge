@@ -24,7 +24,7 @@ Luckily, another developer has already started the job. We have a controller, mo
 ***To help you complete this assignment we listed the high level steps required to complete this assignment. Read through them carefully to get a sense of the requirements for this code challenge, and then tackle them one by one.***
 
 1. Before we start building the new functionality make sure that you are able to create and view a new pizzeria.
-2. Let build following an inside out approach (Domain model to views). Let's first develop classes required to persist Pizzas and associate them to a Pizzeria. We should be able to run the code below:
+2. Let's build following an inside out approach (Domain model to views). Let's begin by developing the classes required to persist Pizzas and associate them to a Pizzeria. We should then be able to run the code below:
 ```Ruby
 pizzeria = Pizzeria.first
 pizza = Pizza.create(name:'Norcia',description:'Tomato, salami, grilled peppers, fresh mozzarella, grana')
