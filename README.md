@@ -32,5 +32,6 @@ pizza.pizzeria = pizzeria
 pizza.save
 pizzeria.pizzas.first === pizza # should return true
 ```
-3. Now that our backend domain model is properly setup we can build the user facing functionality. Adding this functionality will require you to develop code across many different parts of the application including routes, controllers and views. We've included the GIF below to demo the desired functionality:
+3. Set up validations for the pizza and the pizzeria. A pizza should have a name and a description. A pizzeria should have a unique name and an address.
+4. Now that our backend domain model is properly setup we can build the user facing functionality. Adding this functionality will require you to develop code across many different parts of the application including routes, controllers and views. We've included the GIF below to demo the desired functionality:
 ![functionality demo](Pizza.gif)
