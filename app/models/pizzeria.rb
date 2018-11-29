@@ -1,3 +1,0 @@
-class Pizzeria < ApplicationRecord
-  
-end
