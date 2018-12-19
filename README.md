@@ -33,6 +33,6 @@ Unfortunately, we don't have a way for members to create their favorite pizzas (
 
 4. The pizza show page should display its name and ingredients.
 
-5. As a visitor to the website, I should be able to create a new pizza with its name, ingredients, and restaurant.
+5. As a visitor to the website, I should be able to create a new pizza with its name, ingredients, and add it to an existing restaurant.
 
-6. That restaurant should be an existing restaurant.
+6. On the restaurant index page, I should be able to see a search bar, and use it to search for a restaurant.
