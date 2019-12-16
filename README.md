@@ -19,7 +19,7 @@ Clone this repo. Then run `bundle install`, `rails db:migrate`, and `rails db:se
 
 ## Domain
 
-There are two models in the domain, Restaurant and Pizza.
+There are two models in the domain: Restaurant and Pizza.
 
 Each Restaurant can have many Pizzas. Each Pizza belongs to one Restaurant.
 
@@ -78,19 +78,33 @@ On the restaurants index page, each restaurant's name should link to the restaur
 
 ### 5. New Pizza Form
 
-Add controller actions and views necessary to show a form to create a new pizza. The form should have inputs for the name, ingredients, a dropdown to select an existing restaurant, and a button to save the Pizza. After submitting, the user should be redirected to the new Pizza's show page.
+Add controller actions and views necessary to show a form to create a new pizza. The form should have:
 
-### 6. Restaurant Validation
+- an input for the name
+- an input for the ingredients
+- a dropdown to select an existing restaurant
+- a button to save the Pizza
 
-A Restaurant should not have multiple Pizzas with the same name.
+After submitting, the user should be redirected to the new Pizza's show page.
 
-- Add a model validation to prevent creating a pizza with the same name as a pizza that already exists.
-- Scope the validation to the Restaurant that the Pizza belongs to.
-- Add handling for this error to the Pizza creation action. The validation error should be shown on the Pizza creation form when a user attempts to save a duplicate Pizza.
+### 6. Pizza Validation
 
-### 7. Restaurant Search Bar
+Add validation to the Pizza model so that:
 
-On the restaurant index page, I should be able to see a search bar, and use it to search for a restaurant.
+- Pizza must have a name
+- Pizza must have ingredients
+- Pizza must have a restaurant
+
+Add error handling to the Pizza creation action. Show any validation errors on the Pizza creation form if the user attempts to save an invalid Pizza.
+
+### 7. Additional Pizza Validation
+
+A Pizza should not the same name and Restaurant as another Pizza.
+
+- Add a model validation to prevent creating a Pizza with the same name as an existing Pizza
+- Scope the validation so that it only applies within a single Restaurant
+
+If needed, update the error handling and error display so that this error shows on the Pizza creation form.
 
 ## Rubric
 
