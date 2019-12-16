@@ -55,19 +55,42 @@ Update the code of the application to meet the following deliverables. Where app
 
 ***Read through these deliverables carefully to understand the requirements for this code challenge. Tackle them one by one, as they build on each other sequentially.***
 
-1. Create the association between the Pizza and Restaurant.
+### 1. Pizza-Restaurant Association
 
-2. There should be a show page for each Pizza. It should display the name and ingredients.
+Create the association between Pizza and Restaurant.
 
-3. There should be a show page for each restaurant that includes the restaurant's name, address, and a list of the pizzas it sells. Each pizza in the list should link to that pizza's show page.
+### 2. Pizza Show Page
 
-4. On the restaurants index page, each restaurant's name should link to the restaurant's show page.
+There should be a show page for each Pizza. It should display the name and ingredients.
 
-5. Add controller actions and views necessary to show a form to create a new pizza. The form should have inputs for the name, ingredients, a dropdown to select an existing restaurant, and a button to save the Pizza. After submitting, the user should be redirected to the new Pizza's show page.
+### 3. Restaurant Show Page
 
-6. A Restaurant should not have multiple Pizzas with the same name. Add a model validation to prevent creating a pizza with the same name as a pizza that already exists. Scope the validation to the Restaurant that the Pizza belongs to. Add handling for this error to the Pizza creation handler, so that the validation error is shown on the Pizza creation form when a user attempts to save a duplicate Pizza.
+There should be a show page for each restaurant. It should include:
 
-7. On the restaurant index page, I should be able to see a search bar, and use it to search for a restaurant.
+- the restaurant's name and address
+- a list of the pizzas it sells
+
+Each pizza in the list should link to that pizza's show page
+
+### 4. Restaurants Index Page Links
+
+On the restaurants index page, each restaurant's name should link to the restaurant's show page.
+
+### 5. New Pizza Form
+
+Add controller actions and views necessary to show a form to create a new pizza. The form should have inputs for the name, ingredients, a dropdown to select an existing restaurant, and a button to save the Pizza. After submitting, the user should be redirected to the new Pizza's show page.
+
+### 6. Restaurant Validation
+
+A Restaurant should not have multiple Pizzas with the same name.
+
+- Add a model validation to prevent creating a pizza with the same name as a pizza that already exists.
+- Scope the validation to the Restaurant that the Pizza belongs to.
+- Add handling for this error to the Pizza creation action. The validation error should be shown on the Pizza creation form when a user attempts to save a duplicate Pizza.
+
+### 7. Restaurant Search Bar
+
+On the restaurant index page, I should be able to see a search bar, and use it to search for a restaurant.
 
 ## Rubric
 
