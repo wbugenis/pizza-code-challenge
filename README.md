@@ -6,12 +6,12 @@ In this repo, there is a Rails application with some features built out. Your jo
 
 ## Topics
 
-+ MVC
-+ REST
-+ Request-Response Cycle
-+ Forms and Form Helpers
-+ ActiveRecord
-+ Validations
+- MVC
+- REST
+- Request-Response Cycle
+- Forms and Form Helpers
+- ActiveRecord
+- Validations
 
 ## Setup
 
@@ -25,11 +25,29 @@ Each Restaurant can have many Pizzas. Each Pizza belongs to one Restaurant.
 
 The set of Pizzas that belong to a Restaurant is intended to represent that Restaurant's menu - the types of Pizza the Restaurant sells (not individual pies).
 
-## What you already have
+## What You Already Have
 
 The starter code has migrations and models for the initial Pizza and Restaurant models, and seed data for several Restaurants. There are also routes, controllers and views to support the creation, listing, and display of Restaurants and Pizzas.
 
 Once you have followed the setup instructions above, visiting the `/restaurants` route will display all of the Restaurants. Similarly, visiting `/pizzas` will list all the pizzas (there are no pizzas in the seed data, so none will show up at first).
+
+***Schema***
+
+Restaurant
+
+| Column | Type |
+| ------------- | ------------- |
+| name | String |
+| address | String |
+
+Pizza
+
+| Column | Type |
+| ------------- | ------------- |
+| name  | String  |
+| ingredients | String  |
+| created_at  | DateTime  |
+| updated_at  | DateTime  |
 
 ## Instructions
 
