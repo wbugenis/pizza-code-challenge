@@ -99,7 +99,7 @@ Add error handling to the Pizza creation action. Show any validation errors on t
 
 ### 7. Additional Pizza Validation
 
-A Pizza should not the same name and Restaurant as another Pizza.
+A Pizza should not have the same name _and_ Restaurant as another Pizza. So, if two Pizzas have the same name, they must belong to different Restaurants.
 
 - Add a model validation to prevent creating a Pizza with the same name as an existing Pizza
 - Scope the validation so that it only applies within a single Restaurant
