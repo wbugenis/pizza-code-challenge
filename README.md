@@ -59,6 +59,8 @@ Update the code of the application to meet the following deliverables. Where app
 
 Create the association between Pizza and Restaurant.
 
+Each Restaurant can have many Pizzas. Each Pizza belongs to one Restaurant.
+
 ### 2. Pizza Show Page
 
 There should be a show page for each Pizza. It should display the name and ingredients.
