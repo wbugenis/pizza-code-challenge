@@ -91,11 +91,11 @@ After submitting, the user should be redirected to the new Pizza's show page.
 
 ### 6. Pizza Validation
 
-Add validation to the Pizza model so that:
+Add validation to the Pizza model so that each pizza must have:
 
-- Pizza must have a name
-- Pizza must have ingredients
-- Pizza must have a restaurant
+- a name
+- ingredients
+- a Restaurant
 
 Add error handling to the Pizza creation action. Show any validation errors on the Pizza creation form if the user attempts to save an invalid Pizza.
 
