@@ -90,7 +90,7 @@ After submitting, the user should be redirected to the new Pizza's show page.
 
 ### 6. Pizza Validation
 
-Add validation to the Pizza model so that each pizza must have:
+Add validations to the Pizza model so that each pizza must have:
 
 - a name
 - ingredients
