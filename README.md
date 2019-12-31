@@ -19,15 +19,15 @@ Clone this repo. Then run `bundle install`, `rails db:migrate`, and `rails db:se
 
 ## Domain
 
-There are two models in the domain: Restaurant and Pizza.
+There are three models in the domain: Restaurant, Pizza, and a join model RestaurantPizza.
 
-Each Restaurant can have many Pizzas. Each Pizza belongs to one Restaurant.
+Each Restaurant can have many Pizzas. Each Pizza can belong to multiple Restaurants.
 
 ## What You Already Have
 
-The starter code has migrations and models for the initial Pizza and Restaurant models, and seed data for several Restaurants. There are also routes, controllers and views to support the creation, listing, and display of Restaurants and Pizzas.
+The starter code has migrations, models, and seed data for the initial Pizza and Restaurant models. There are routes, controllers and views to support listing Restaurants and Pizzas.
 
-Once you have followed the setup instructions above, visiting the `/restaurants` route will display all of the Restaurants. Similarly, visiting `/pizzas` will list all the pizzas (there are no pizzas in the seed data, so none will show up at first).
+Once you have followed the setup instructions above, visiting the `/restaurants` route will display all of the Restaurants. Similarly, visiting `/pizzas` will list all the pizzas.
 
 ***Schema***
 
@@ -53,11 +53,11 @@ Update the code of the application to meet the following deliverables. Follow RE
 
 ***Read through these deliverables carefully to understand the requirements for this code challenge. Tackle them one by one, as they build on each other sequentially.***
 
-### 1. Pizza-Restaurant Association
+### 1. Create the RestaurantPizza Association
 
-Create the association between Pizza and Restaurant.
+Create the join model RestaurantPizza to store the association between Pizzas and Restaurants. Update the schema and models to create the relationship.
 
-Each Restaurant can have many Pizzas. Each Pizza belongs to one Restaurant.
+Each Restaurant can have many Pizzas. Each Pizza can belong to multiple Restaurants.
 
 ### 2. Pizza Show Page
 
@@ -65,16 +65,16 @@ There should be a show page for each Pizza. It should display the name and ingre
 
 ### 3. Restaurant Show Page
 
-There should be a show page for each restaurant. It should include:
+There should be a show page for each Restaurant. It should include:
 
-- the restaurant's name and address
-- a list of the pizzas it sells
+- the Restaurant's name and address
+- a list of the Pizzas it sells
 
-Each pizza in the list should link to that pizza's show page
+Each pizza in the list should link to that Pizza's show page.
 
 ### 4. Restaurants Index Page Links
 
-On the restaurants index page, each restaurant's name should link to the restaurant's show page.
+On the Restaurant index page, each Restaurant's name should link to the restaurant's show page.
 
 ### 5. New Pizza Form
 
@@ -93,11 +93,10 @@ Add validations to the Pizza model so that each pizza must have:
 
 - a name
 - ingredients
-- a Restaurant
 
-Add error handling to the Pizza creation action. Show any validation errors on the Pizza creation form if the user attempts to save an invalid Pizza.
+Add error handling to the Pizza create action. Show any validation errors on the Pizza creation form if the user attempts to save an invalid Pizza.
 
-### 7. Additional Pizza Validation
+### 7. Advanced: Restaurant Pizza Validation
 
 A Pizza should not have the same name _and_ Restaurant as another Pizza. So, if two Pizzas have the same name, they must belong to different Restaurants.
 
@@ -105,6 +104,25 @@ A Pizza should not have the same name _and_ Restaurant as another Pizza. So, if 
 - Scope the validation so that it only applies within a single Restaurant
 
 If needed, update the error handling and error display so that this error shows on the Pizza creation form.
+
+### 8. Advanced: Restaurant Update Form to Link Multiple Pizzas
+
+Create a form to update a Restaurant with:
+
+- a text input for the name
+- a text input for the address
+- a list of Pizzas, with a checkbox for each one
+- a submit button
+
+The update action should create associations for each of the Pizzas the user selected.
+
+When the form saves, the user should be redirected to the Restaurant show page.
+
+The Restaurant show page should show a link to this edit page.
+
+### 9. Advanced: Display Count of Restaurants on Pizza Index Page
+
+On the Pizza index page, display the number of Restaurants that have that Pizza next to each Pizza's name.
 
 ## Rubric
 
