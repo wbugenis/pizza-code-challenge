@@ -23,7 +23,6 @@ There are two models in the domain: Restaurant and Pizza.
 
 Each Restaurant can have many Pizzas. Each Pizza belongs to one Restaurant.
 
-Each Pizza represents an item on a Restaurant's menu.
 
 ## What You Already Have
 
