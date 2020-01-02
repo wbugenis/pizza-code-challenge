@@ -104,7 +104,11 @@ Add a validation to prevent this.
 
 Update the error handling and error display so that this error shows on the Pizza creation form.
 
-### 8. Advanced: Restaurant Update Form to Link Multiple Pizzas
+### 8. Advanced: Display Count of Restaurants on Pizza Index Page
+
+On the Pizza index page, display the number of Restaurants that have that Pizza next to each Pizza's name.
+
+### 9. Advanced: Restaurant Update Form to Link Multiple Pizzas
 
 Create a form to update a Restaurant with:
 
@@ -118,10 +122,6 @@ The update action should create associations for each of the Pizzas the user sel
 When the form saves, the user should be redirected to the Restaurant show page.
 
 The Restaurant show page should show a link to this edit page.
-
-### 9. Advanced: Display Count of Restaurants on Pizza Index Page
-
-On the Pizza index page, display the number of Restaurants that have that Pizza next to each Pizza's name.
 
 ## Rubric
 
