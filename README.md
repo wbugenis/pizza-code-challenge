@@ -112,7 +112,7 @@ On the Pizza index page, display the number of Restaurants that have that Pizza 
 
 Create a form to update a Restaurant with:
 
-- a text input for the name
+- a text input for the name (with the current name already displayed)
 - a text input for the address
 - a list of Pizzas, with a checkbox for each one
 - a submit button
