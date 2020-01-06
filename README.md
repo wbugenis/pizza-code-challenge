@@ -123,6 +123,10 @@ When the form saves, the user should be redirected to the Restaurant show page.
 
 The Restaurant show page should show a link to this edit page.
 
+### Feature Demo
+
+![screen capture of feature demo](pizza-features-demo.gif)
+
 ## Rubric
 
 ### Models, Associations, and Validations
