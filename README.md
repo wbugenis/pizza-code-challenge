@@ -55,9 +55,11 @@ Update the code of the application to meet the following deliverables. Follow RE
 
 ### 1. Create the RestaurantPizza Association
 
-Create the join model RestaurantPizza to store the association between Pizzas and Restaurants. Update the schema and models to create the relationship.
+Each Restaurant can have many Pizzas and each Pizza can belong to multiple Restaurants. Each Restaurant can set the price of a Pizza to an integer. Update the schema and models to create the RestaurantPizza relationship so that:
 
-Each Restaurant can have many Pizzas. Each Pizza can belong to multiple Restaurants.
+- A Pizza can be sold at many Restaurants
+- A Restaurant can sell many Pizzas
+- RestaurantPizza stores an integer price for each pizza (Remember, each Restaurant can choose how to price its own Pizzas)
 
 ### 2. Pizza Show Page
 
@@ -69,6 +71,7 @@ There should be a show page for each Restaurant. It should include:
 
 - the Restaurant's name and address
 - a list of the Pizzas it sells
+- the price of each Pizza
 
 Each pizza in the list should link to that Pizza's show page.
 
@@ -78,49 +81,39 @@ On the Restaurant index page, each Restaurant's name should link to the restaura
 
 ### 5. RestaurantPizza Form
 
-Add controller actions and views necessary to show a form to associate a pizza with a restaurant. The user can:
+Add controller actions and views necessary to show a form to associate a Pizza with a Restaurant. The user can:
 
-- Choose an existing pizza from a select dropdown
-- Choose an existing restaurant from a select dropdown
-- Click a button to save the Pizza
+- Choose an existing Pizza from a select dropdown
+- Choose an existing Restaurant from a select dropdown
+- Enter a numeric price
+- Click a button to save the RestaurantPizza association
 
 After submitting, the user should be redirected to the selected Restaurant's show page.
 
-### 6. Pizza Validation
+### 6. RestaurantPizza Validation
 
-Add validations to the Pizza model so that each pizza must have:
+Add validations to the RestaurantPizza model so that each RetaurantPizza must have:
 
-- a name
-- ingredients
+- A price between 1 and 30
+- Add handling for this error to the RestaurantPizza create action
+- The validation error should be shown on the RestaurantPizza creation form when a user attempts to save a RestaurantPizza with an invalid price
 
-Add error handling to the Pizza create action. Show any validation errors on the Pizza creation form if the user attempts to save an invalid Pizza.
+### 7. Advanced: Additional RestaurantPizza Validation
 
-### 7. Advanced: Pizza Validation
+A Pizza should only be associated with the same Restaurant once. (It wouldn't make sense for Pizza Hut to have Cheese Pizza listed on its menu twice!)
 
-Pizzas should not have the same name.
-
-Add a validation to prevent this.
-
-Update the error handling and error display so that this error shows on the Pizza creation form.
+Add a validation to RestaurantPizza to ensure that each Pizza can only appear once on the same Restaurant's menu.
+Update the error handling on the RestaurantPizza creation form to show this validation error.
 
 ### 8. Advanced: Display Count of Restaurants on Pizza Index Page
 
 On the Pizza index page, display the number of Restaurants that have that Pizza next to each Pizza's name.
 
-### 9. Advanced: Restaurant Update Form to Link Multiple Pizzas
+### 9. Advanced: Restaurant Average Pizza Price
 
-Create a form to update a Restaurant with:
+Show the average price of a Pizza on the Restaurant show page. 
 
-- a text input for the name (with the current name already displayed)
-- a text input for the address (with the current address value displayed)
-- a list of Pizzas, with a checkbox for each one
-- a submit button
-
-The update action should create associations for each of the Pizzas the user selected.
-
-When the form saves, the user should be redirected to the Restaurant show page.
-
-The Restaurant show page should show a link to this edit page.
+To calculate the average, add up all of the Restaurant's Pizzas' prices, and then divide by the number of Pizzas.
 
 ### Feature Demo
 
