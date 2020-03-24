@@ -91,7 +91,7 @@ After submitting, the user should be redirected to the selected Restaurant's sho
 
 ### 6. RestaurantPizza Validation
 
-Add validations to the RestaurantPizza model so that each RetaurantPizza must have:
+Add validations to the RestaurantPizza model so that each RestaurantPizza must have:
 
 - A price between 1 and 30
 - Add handling for this error to the RestaurantPizza create action
